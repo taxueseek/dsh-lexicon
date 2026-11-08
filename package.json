@@ -1,5 +1,5 @@
 {
-  "name": "dsh-lexicon",
+  "name": "@taxueseek/dsh-lexicon",
   "version": "0.2.0",
   "description": "IME lexicon manager for DeepSeek Harness: bundles the ime_lexicon.py engine (Doubao / WeType word libraries) as model tools — detect, export, backup, industry-term search, build, optimize, and staging import. Never applies to a live IME without explicit user confirmation.",
   "keywords": [
