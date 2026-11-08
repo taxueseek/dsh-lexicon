@@ -1,0 +1,10 @@
+# dsh-lexicon bundle patch: one insert registering the IME lexicon toolkit.
+# The row id must match the node half's exported cordis `name`.
+# scriptPath is intentionally omitted — the node half defaults to the bundled
+# copy under vendor/ime-lexicon; override it in settings to point elsewhere.
+- insert:
+    - id: lexicon-toolkit
+      name: 'dsh-lexicon'
+      config:
+        scriptTimeoutMs: 120000
+        searchTimeoutMs: 300000

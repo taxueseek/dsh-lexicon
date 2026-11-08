@@ -1,0 +1,52 @@
+{
+  "name": "dsh-lexicon",
+  "version": "0.2.0",
+  "description": "IME lexicon manager for DeepSeek Harness: bundles the ime_lexicon.py engine (Doubao / WeType word libraries) as model tools — detect, export, backup, industry-term search, build, optimize, and staging import. Never applies to a live IME without explicit user confirmation.",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "cordis",
+    "plugin",
+    "ime",
+    "lexicon",
+    "doubao",
+    "wetype",
+    "input-method"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "vendor",
+    "!**/__pycache__",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.6 || ^0.2.0-rc.1",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "^5.7.2"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepare": "npm run build",
+    "test": "node --test",
+    "prepublishOnly": "npm run build && npm test"
+  }
+}
